@@ -8,12 +8,13 @@ const deserializeUser = async (
   res: Response,
   next: NextFunction
 ) => {
-  const accessToken = get(req, "headers.authorization", "").replace(
-    /^Bearer\s/,
-    ""
-  );
+  const accessToken =
+    get(req, "cookies.accessToken") ||
+    get(req, "headers.authorization", "").replace(/^Bearer\s/, "");
 
-  const refreshToken = get(req, "headers.x-refresh")?.toString();
+  const refreshToken =
+    get(req, "cookies.refreshToken") ||
+    get(req, "headers.x-refresh")?.toString();
 
   if (!accessToken) {
     return next();
@@ -32,6 +33,15 @@ const deserializeUser = async (
 
     if (newAccessToken && typeof refreshToken === "string") {
       res.setHeader("x-access-token", newAccessToken);
+
+      res.cookie("accessToken", newAccessToken, {
+        maxAge: 90000, // 15 mins
+        httpOnly: true,
+        domain: "localhost",
+        path: "/",
+        sameSite: "strict",
+        secure: false,
+      });
     }
 
     const result = verifyJwt(newAccessToken);
