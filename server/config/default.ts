@@ -41,4 +41,9 @@ MQQaKQKBgBKTmi9pxI/If6aX0s/7m3U2dvVzziu2N1jEx1zwdYAUYB4YvVhGgxEI
 lHGewq1R1TXS8IDAdIPrT3Hjdsa7pcFHfAfIouQ6D2aq0vHMwyk2Dm/Hy1gJAxmD
 3vhFleAc1IZ3RL5d0wdRUxq87OesrtzbLxXej3m7kIspnubTNPjq
 -----END RSA PRIVATE KEY-----`,
+
+  googleClientId:
+    "538713501634-43rkjhlsnfjh591jtekmkkl171qf9rkd.apps.googleusercontent.com",
+  googleClientSecret: "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",
+  googleOauthRedirectUrl: "http://localhost:1337/api/sessions/oauth/google",
 };
