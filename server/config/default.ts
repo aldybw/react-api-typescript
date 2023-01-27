@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 export default {
   port: 1337,
   origin: "http://localhost:3000",
@@ -5,45 +9,9 @@ export default {
   saltWorkFactor: 10,
   accessTokenTtl: "15m",
   refreshTokenTtl: "1y",
-  publicKey: `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv01d0O2YWGAaamNOvH5I
-6v47Bl28PqFDtZa8GZWEUuUrXx3LkyJrwFSeL2vdVkQLGxEKFRxszQIpByWXxj+v
-FT8tzLZmCNLgVSmLcrCne1TDdP7NwdtVPd3kQLNfFAecjWXbQAvE3azY/tbr/tcK
-BrRVG79gYtzWklFuQ7QnQi8sXfjYc1GCQ0bovEYdVzlWNWTXbnPMSEX8iu6H16Lz
-pAq8BsMpEEULC9wLHHJXf7i8frg4hhagZW4rOEux3M0T4E99N0x1APXRp5IcW6l2
-6JQMSU/TJFNsLw3ubjaYER2DNi1iIYTtY+pxixgIabm6zAAPpuLdlUEbRdWU8d8U
-GwIDAQAB
------END PUBLIC KEY-----`,
-  privateKey: `-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAv01d0O2YWGAaamNOvH5I6v47Bl28PqFDtZa8GZWEUuUrXx3L
-kyJrwFSeL2vdVkQLGxEKFRxszQIpByWXxj+vFT8tzLZmCNLgVSmLcrCne1TDdP7N
-wdtVPd3kQLNfFAecjWXbQAvE3azY/tbr/tcKBrRVG79gYtzWklFuQ7QnQi8sXfjY
-c1GCQ0bovEYdVzlWNWTXbnPMSEX8iu6H16LzpAq8BsMpEEULC9wLHHJXf7i8frg4
-hhagZW4rOEux3M0T4E99N0x1APXRp5IcW6l26JQMSU/TJFNsLw3ubjaYER2DNi1i
-IYTtY+pxixgIabm6zAAPpuLdlUEbRdWU8d8UGwIDAQABAoIBABqtHFzS56XEj6Ua
-lbNa6Cp+FYIE691PRJoGW9LffX/HvZK6chW254/+3L4fzFIdaUUMImag5kUiPNFm
-exx7QJwgXsUcrEF6Z9ZIVaNCd2BkiLWrBcs3ctK5O1KQZhJCIMu7kpAtnqALhzOQ
-3yt+wMMAPkarxbI+ObJWpknM+JUrBig/GfruSgdIi80GXaUUzXsbVIGnkTaLPuRz
-stv6hk/w6iMkVOBVMePaI9r1yhSg0LEbt0GGEYk+0hvLvNq0hf6JIh8xtIr+LtrY
-TPjlbmhzkt8HDnEe1LwLQO+Otp7rVh/nv7J3itaEgKpUEIUCoBe7xYJ7QFzaR3+m
-d0wjHZkCgYEA/5gaDjxt/dFcLjbyBeoJw0qNs2EwM9P+oYPGT7GICTYQaqhtQCoh
-iZ4jn4TEkGa/Th8DfWaDoYM9920O6eZEcWzLyKvlLEVxFFzV6/Ub5emdwRiVJhqI
-LwDdPrBWumT5/B4123Cg7UMFNAa5vMxuK6G8UOo3kON9B5kHRSeNd0MCgYEAv5sh
-Vg91YPJYv9PA8CBu+5QfytQL+xK7S7RQEUba1FL8ei5N/bi29y+6b5+bX1swZqr9
-3/xK/P94SDnCfAJai0YnflwKGWB0FL2wTY5QhN1/SJxBrXLl2Z+aZD6SrEYMjm5F
-kf4ZkysPH3lSBCcjx2KXhevAI/T2qXV7iDRJhkkCgYA+I39qKJzhEU4k2iza7Tw0
-Y2Kx0pYCc667G6tR4qpc+uzg0VPGPrfqmiy08nVLWf92gam6ifrEgIDHL5dpnBbV
-sIqWndvYeIV2Wt+TPwLqUXKN6GkSW27yZnZjcEGVjUkNV1bmo6osJJgWPvBXCyhZ
-qTd8QIUDz5qtBzIySNxmuwKBgQC6ExBbwGVwgcoYeK9NQ2IkZaQ+WJFOAdHsYi7D
-qHjJa9IPYbqR5PmisjIvRuQfxbIKcpJcHGpCqmKIWbd6sNp3mOivuPiBzn7Mya5W
-kxe1AFolDMJnjEaVgn7wTSgpr1lwVLyxXABAQLfODAbPS6decWvPPbR59uI4jYQr
-MQQaKQKBgBKTmi9pxI/If6aX0s/7m3U2dvVzziu2N1jEx1zwdYAUYB4YvVhGgxEI
-lHGewq1R1TXS8IDAdIPrT3Hjdsa7pcFHfAfIouQ6D2aq0vHMwyk2Dm/Hy1gJAxmD
-3vhFleAc1IZ3RL5d0wdRUxq87OesrtzbLxXej3m7kIspnubTNPjq
------END RSA PRIVATE KEY-----`,
-
-  googleClientId:
-    "538713501634-43rkjhlsnfjh591jtekmkkl171qf9rkd.apps.googleusercontent.com",
-  googleClientSecret: "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",
+  publicKey: `${process.env.PUBLIC_KEY}`,
+  privateKey: `${process.env.PRIVATE_KEY}`,
+  googleClientId: process.env.GOOGLE_CLIENT_ID,
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
   googleOauthRedirectUrl: "http://localhost:1337/api/sessions/oauth/google",
 };
